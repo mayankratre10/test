@@ -1,0 +1,14 @@
+name: install_python
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+ test:
+   runs-on: [ ubuntu-latest ]
+   steps:
+     - name: Checkout code
+       uses: actions/checkout@v2
+     - name: install
+       uses: actions/setup-python@v3.x
+     - name: run script
+       run: python app.py
+       
